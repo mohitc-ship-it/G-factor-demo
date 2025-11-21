@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bell, Settings, User, ChevronDown, Activity } from 'lucide-react';
+import { Bell, Settings, User, ChevronDown } from 'lucide-react';
 
 const TopBar: React.FC = () => {
     return (

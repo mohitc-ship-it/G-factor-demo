@@ -6,7 +6,7 @@ const KnowledgeBase: React.FC = () => {
     const [query, setQuery] = useState('');
     const [answer, setAnswer] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+
 
     const getMockKnowledgeBaseResponse = (query: string): string => {
         const lowerQuery = query.toLowerCase();
@@ -57,7 +57,7 @@ const KnowledgeBase: React.FC = () => {
 
         setLoading(true);
         setAnswer(null);
-        setError(false);
+
 
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 800));
@@ -84,7 +84,7 @@ const KnowledgeBase: React.FC = () => {
             setAnswer(data.answer);
         } catch (err) {
             console.error('Search failed:', err);
-            setError(true);
+
             setAnswer(getMockKnowledgeBaseResponse(query));
         } finally {
             setLoading(false);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, ArrowLeft, AlertTriangle, Wrench, Clock } from 'lucide-react';
+import { Calendar, ArrowLeft, Clock } from 'lucide-react';
 
 interface HistoryItem {
     date: string;
